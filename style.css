@@ -1,5 +1,5 @@
 body {
-  background: #fafafa;
+  background-image:url(pagina.jpg);
 }
 
 .dino {
@@ -8,6 +8,7 @@ body {
   background-image: url(dino.png);
   width: 60px;
   height: 60px;
+
 }
 
 .cactus {
@@ -16,13 +17,14 @@ body {
   height: 60px;
   bottom: 0;
   background-image: url(cactus.png);
+  
 }
 
 .game-over {
   text-align: center;
-  color: #666;
+  color: red;
   margin: 50px 0;
-  font-family: arial;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 @keyframes slideright {
@@ -37,7 +39,7 @@ body {
 .background {
   position: absolute;
   bottom: 0px;
-  background-image: url('background.png');
+  background-image: url('pagina.png');
   background-repeat: repeat-x;
   animation: slideright 600s infinite linear;
   -webkit-animation: slideright 600s infinite linear;

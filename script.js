@@ -6,7 +6,7 @@ let isGameOver = false;
 let position = 0;
 
 function handleKeyUp(event) {
-  if (event.keyCode === 32) {
+  if (event.keyCode === 38) {
     if (!isJumping) {
       jump();
     }
@@ -26,16 +26,16 @@ function jump() {
           clearInterval(downInterval);
           isJumping = false;
         } else {
-          position -= 20;
+          position -= 30;
           dino.style.bottom = position + 'px';
         }
-      }, 20);
+      }, 30);
     } else {
       // Subindo
-      position += 20;
+      position += 30;
       dino.style.bottom = position + 'px';
     }
-  }, 20);
+  }, 30);
 }
 
 function createCactus() {
@@ -58,8 +58,8 @@ function createCactus() {
       // Game over
       clearInterval(leftTimer);
       isGameOver = true;
-      document.body.innerHTML = '<h1 class="game-over">Fim de jogo</h1>';
-    } else {
+      document.body.innerHTML = '<h1 class="game-over">Game Over</h1>';  
+    } else { 
       cactusPosition -= 10;
       cactus.style.left = cactusPosition + 'px';
     }
